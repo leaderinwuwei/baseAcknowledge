@@ -1,4 +1,4 @@
-package cn.spring.study.beansinterface;
+package cn.spring.study.beansInterface;
 
 /**
  * @author Administrator

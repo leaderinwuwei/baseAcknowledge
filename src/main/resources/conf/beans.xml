@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
-<!--ref指定依赖 value指定包装类-->
+    <!--ref指定依赖 value指定包装类-->
     <bean id="person" class="cn.spring.study.beansInterface.Chinese">
-        <property name="axe" ref="axe" />
+        <property name="axe" ref="axe"/>
     </bean>
     <bean id="axe" class="cn.spring.study.beansInterface.StongAxe"/>
 
+    <!--构造注入-->
+    <bean id="leaderinwuwei" class="cn.spring.study.DITest.Leaderinwuwei">
+        <constructor-arg ref="eatMeat"/>
+    </bean>
+    <bean id="eatMeat" class="cn.spring.study.DITest.EatMeat"/>
 </beans>

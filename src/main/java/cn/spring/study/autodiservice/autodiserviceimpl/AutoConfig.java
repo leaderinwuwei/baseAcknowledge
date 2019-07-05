@@ -1,4 +1,4 @@
-package cn.spring.study.autoDIService.autoDIServiceImpl;
+package cn.spring.study.autodiservice.autodiserviceimpl;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -10,5 +10,5 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan
-public class autoConfig {
+public class AutoConfig {
 }

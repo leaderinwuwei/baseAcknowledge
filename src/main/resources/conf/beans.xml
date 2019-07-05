@@ -11,19 +11,19 @@
     <bean id="axe" class="cn.spring.study.beansInterface.StongAxe"/>
 
     <!--构造注入-->
-    <bean id="leaderinwuwei" class="cn.spring.study.DITest.Leaderinwuwei">
+    <bean id="leaderinwuwei" class="cn.spring.study.ditest.Leaderinwuwei">
         <constructor-arg ref="eatMeat"/>
     </bean>
-    <bean id="eatMeat" class="cn.spring.study.DITest.EatMeat"/>
+    <bean id="eatMeat" class="cn.spring.study.ditest.EatMeat"/>
 
-    <bean id="washHand" class="cn.spring.study.DITest.WashHand"/>
+    <bean id="washHand" class="cn.spring.study.ditest.WashHand"/>
     <aop:config>
         <aop:aspect ref="washHand">
-            <aop:pointcut id="embark" expression="execution(* cn.spring.study.DITest.Leaderinwuwei.dosomeThing(..))"/>
+            <aop:pointcut id="embark" expression="execution(* cn.spring.study.ditest.Leaderinwuwei.dosomeThing(..))"/>
             <aop:before method="attention" pointcut-ref="embark"/>
         </aop:aspect>
     </aop:config>
 
-    <bean class="cn.spring.study.autoDIService.autoDIServiceImpl.SpringContextHoldert" lazy-init="false" />
-    <bean id="autoService" class="cn.spring.study.autoDIService.autoDIServiceImpl.autoServiceImpl" />
+
+    <bean id="autoService" class="cn.spring.study.autodiservice.autodiserviceimpl.AutoServiceImpl" />
 </beans>

@@ -1,6 +1,6 @@
 package detail;
 
-import cn.spring.study.DITest.Leaderinwuwei;
+import cn.spring.study.ditest.Leaderinwuwei;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

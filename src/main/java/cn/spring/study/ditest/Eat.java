@@ -1,4 +1,4 @@
-package cn.spring.study.DITest;
+package cn.spring.study.ditest;
 
 /**
  * 2 * @Author: WF

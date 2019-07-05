@@ -1,6 +1,6 @@
 package detail;
 
-import cn.spring.study.autoDIService.autoService;
+import cn.spring.study.autodiservice.AutoService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -9,18 +9,18 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * 3 * @Date: 2019/7/5/005 13:44
  * 4
  */
-public class autoDITest implements Context{
-    private static cn.spring.study.autoDIService.autoService autoService;
+public class AutoDITest implements Context{
+    private static AutoService auto;
 
 
     static {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("conf/beans.xml");
-        autoService = ctx.getBean(autoService.class);
+        auto = (AutoService) ctx.getBean("autoService");
     }
 
     @Override
     public void test() {
-        autoService.print();
+        auto.print();
 
     }
 }

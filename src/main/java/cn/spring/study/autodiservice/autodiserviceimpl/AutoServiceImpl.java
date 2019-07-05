@@ -1,6 +1,6 @@
-package cn.spring.study.autoDIService.autoDIServiceImpl;
+package cn.spring.study.autodiservice.autodiserviceimpl;
 
-import cn.spring.study.autoDIService.autoService;
+import cn.spring.study.autodiservice.AutoService;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * 4
  */
 @Component
-public class autoServiceImpl implements autoService {
+public class AutoServiceImpl implements AutoService {
     @Override
     public void print() {
         System.out.println("自动装配成功");

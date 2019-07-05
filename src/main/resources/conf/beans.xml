@@ -24,4 +24,6 @@
         </aop:aspect>
     </aop:config>
 
+    <bean class="cn.spring.study.autoDIService.autoDIServiceImpl.SpringContextHoldert" lazy-init="false" />
+    <bean id="autoService" class="cn.spring.study.autoDIService.autoDIServiceImpl.autoServiceImpl" />
 </beans>

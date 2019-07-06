@@ -1,9 +1,13 @@
-import cn.spring.study.autodiservice.AutoService;
-import cn.spring.study.autodiservice.autodiserviceimpl.AutoServiceImpl;
+import cn.spring.study.autodiservice.autodiserviceimpl.AutoConfig;
 import cn.spring.study.ditest.Eat;
 import cn.spring.study.ditest.EatMeat;
 import cn.spring.study.ditest.Leaderinwuwei;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.mockito.Mockito.*;
 
@@ -12,6 +16,8 @@ import static org.mockito.Mockito.*;
  * 3 * @Date: 2019/6/28/028 15:10
  * 4 * 单元测试
  */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = AutoConfig.class)
 class JunitTest {
     @Test
     void eatTest() {
@@ -30,7 +36,11 @@ class JunitTest {
 
     @Test
     void autoDITest() {
-        AutoService autoService = new AutoServiceImpl();
-        autoService.print();
+        ApplicationContext applicationContext =
+                new AnnotationConfigApplicationContext(AutoConfig.class);
+        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
+        for (String beanName : beanDefinitionNames) {
+            System.out.println("beanName: " + beanName);
+        }
     }
 }

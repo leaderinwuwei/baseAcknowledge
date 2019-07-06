@@ -10,6 +10,10 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class AutoServiceImpl implements AutoService {
+    public AutoServiceImpl() {
+        System.out.println("实例化！！！！！！！！！！！！！！");
+    }
+
     @Override
     public void print() {
         System.out.println("自动装配成功");

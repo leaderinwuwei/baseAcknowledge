@@ -4,6 +4,7 @@ import cn.spring.study.ditest.EatMeat;
 import cn.spring.study.ditest.Leaderinwuwei;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
@@ -17,8 +18,11 @@ import static org.mockito.Mockito.*;
  * 4 * 单元测试
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = AutoConfig.class)
+@ContextConfiguration(locations = {"classpath:conf/beans.xml"})
 class JunitTest {
+    @Autowired
+    private Leaderinwuwei leaderinwuwei;
+
     @Test
     void eatTest() {
         Eat eat = mock(Eat.class);
@@ -42,5 +46,10 @@ class JunitTest {
         for (String beanName : beanDefinitionNames) {
             System.out.println("beanName: " + beanName);
         }
+    }
+
+    @Test
+    void autowiredTest() {
+        leaderinwuwei.dosomeThing();
     }
 }

@@ -1,6 +1,7 @@
 package cn.spring.study.ditest; 
 
-import org.junit.Test; 
+import cn.spring.study.config.AutoConfig;
+import org.junit.Test;
 import org.junit.Before; 
 import org.junit.After;
 import org.junit.runner.RunWith;
@@ -16,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 * @version 1.0 
 */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:conf/beans.xml"})
+@ContextConfiguration(classes = AutoConfig.class)
 public class LeaderinwuweiTest {
     @Autowired
     private Leaderinwuwei leaderinwuwei;

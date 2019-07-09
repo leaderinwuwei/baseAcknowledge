@@ -1,5 +1,4 @@
-import cn.spring.study.autodiservice.autodiserviceimpl.AutoConfig;
-import cn.spring.study.autodiservice.autodiserviceimpl.DITest;
+import cn.spring.study.config.AutoConfig;
 import detail.AutoDITest;
 import detail.Context;
 import org.springframework.context.ApplicationContext;

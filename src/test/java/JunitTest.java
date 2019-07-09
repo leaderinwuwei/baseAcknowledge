@@ -1,4 +1,4 @@
-import cn.spring.study.autodiservice.autodiserviceimpl.AutoConfig;
+import cn.spring.study.config.AutoConfig;
 import cn.spring.study.ditest.Eat;
 import cn.spring.study.ditest.EatMeat;
 import cn.spring.study.ditest.Leaderinwuwei;

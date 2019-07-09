@@ -1,7 +1,8 @@
 package cn.spring.study.autodiservice;
 
-import cn.spring.study.autodiservice.autodiserviceimpl.AutoConfig;
+import cn.spring.study.config.AutoConfig;
 import cn.spring.study.autodiservice.autodiserviceimpl.DITest;
+import cn.spring.study.ditest.Leaderinwuwei;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +24,13 @@ public class JavaConfigTest {
     private AutoService autoService;
     @Autowired
     private DITest diTest;
-
+    @Autowired
+    private Leaderinwuwei leaderinwuwei;
     @Test
     public void testAutoDITest() throws Exception {
         autoService.print();
         diTest.pp();
+        leaderinwuwei.dosomeThing();
     }
 
 

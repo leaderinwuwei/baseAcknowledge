@@ -1,0 +1,11 @@
+Initial and cleanUp
+5.1 use constructor to make sure initialized and created
+5.2 method override
+ 5.2.1 distinguish override method
+        1、 unique form parameter
+        2、 base type (No suggesting using this)
+5.3 default constructor(no parameter)
+5.4 'this' key word (sometimes we just need to return this)
+ 5.4.1 to use constructor
+5.5 garbage clean
+5.6 member initialize

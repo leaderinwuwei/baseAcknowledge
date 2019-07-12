@@ -4,6 +4,8 @@ import detail.Context;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Date;
+
 public class ContextTest {
     protected void getAllInitializedBean() {
         ApplicationContext applicationContext =
@@ -15,13 +17,14 @@ public class ContextTest {
         }
     }
 
+
     /**
      * 此方法用来在非测试类中测试Spring
      *
      * @param args
      */
     public static void main(String[] args) {
-        Context context = new AutoDITest();
-        context.test();
+        /*Context context = new AutoDITest();
+        context.test();*/
     }
 }
